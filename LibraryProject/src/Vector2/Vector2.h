@@ -14,6 +14,6 @@ public:
 public:
 	Vector2 operator+(Vector2 other);
 public:
-	float x, y;
+	double x, y;
 };
 
