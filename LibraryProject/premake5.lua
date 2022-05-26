@@ -1,5 +1,5 @@
-project "ExampleProject"
-    kind "ConsoleApp"
+project "LibraryProject"
+    kind "StaticLib"
     language "C++"
     cppdialect "C++20"
     staticruntime "on"
@@ -13,23 +13,11 @@ project "ExampleProject"
         "src/**.hpp"
     }
 
-    includedirs {
-        "../LibraryProject/src"
-    }
-
-    links {
-        "LibraryProject"
-    }
-
-    defines {
-        "WINDOWS"
-    }
-
     filter { "configurations:Debug "}
         buildoptions "/MTd"
         runtime "Debug"
         symbols "on"
-    
+
     filter { "configurations:Release" }
         buildoptions "/MT"
         runtime "Release"
